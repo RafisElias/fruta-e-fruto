@@ -1,0 +1,14 @@
+.receita__imagem__container {
+  overflow: hidden;
+}
+
+.receita__imagem {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 200ms ease-in-out;
+}
+
+.receita__imagem:hover {
+  transform: scale(1.1);
+}

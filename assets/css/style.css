@@ -1,0 +1,17 @@
+:root {
+  --ff-pacifico: Pacifico, cursive;
+  --cls-vinho: #8d0606;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

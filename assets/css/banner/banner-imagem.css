@@ -1,0 +1,10 @@
+.banner__imagem {
+  min-height: 75vh;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .banner__imagem {
+    min-height: calc(100vh - 72px);
+  }
+}

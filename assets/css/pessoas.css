@@ -1,0 +1,7 @@
+.pessoas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 3rem;
+}

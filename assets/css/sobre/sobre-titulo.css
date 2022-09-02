@@ -1,0 +1,5 @@
+.sobre__titulo {
+  color: var(--cls-vinho);
+  font-family: var(--ff-pacifico);
+  font-size: clamp(2rem, 2vw + 1rem, 3.1875rem);
+}
