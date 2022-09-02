@@ -1,0 +1,90 @@
+---
+const pessoas = [
+  {
+    img: "/assets/img/pessoas/roberta.jpg",
+    nome: "Roberta",
+    funcao: "Conteúdo",
+  },
+  {
+    img: "/assets/img/pessoas/marcela.jpg",
+    nome: "Marcela",
+    funcao: "Chef de cozinha",
+  },
+  {
+    img: "/assets/img/pessoas/andreia.jpg",
+    nome: "Andréia",
+    funcao: "Pequena Produtora",
+  },
+];
+---
+
+<section id="quem-somos" class="quem-somos">
+  <h3 class="quem-somos__titulo">Quem somos</h3>
+  <p class="quem-somos__descricao">
+    Conheça a comunidade por trás da iniciativa
+  </p>
+  <div class="pessoas">
+    {
+      pessoas.map((pessoa) => (
+        <div class="pessoa">
+          <img src={pessoa.img} class="pessoa__imagem" alt="" />
+          <div class="pessoa__imagem" data-pessoa="roberta" />
+          <span class="pessoa__nome">{pessoa.nome}</span>
+          <span class="pessoa__funcao">{pessoa.funcao}</span>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .quem-somos {
+    text-align: center;
+    padding: 5rem;
+  }
+
+  .quem-somos__titulo {
+    margin-bottom: 1rem;
+    color: var(--cls-vinho);
+    font-size: 3.1875rem;
+    font-family: Pacifico, cursive;
+  }
+
+  .quem-somos__descricao {
+    font-weight: 300;
+    font-size: 1.75rem;
+    color: #595959;
+  }
+
+  .pessoas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .pessoa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .pessoa__imagem {
+    width: 300px;
+    border-radius: 100vmax;
+  }
+
+  .pessoa__nome {
+    color: var(--cls-vinho);
+    font-weight: 400;
+    font-family: var(--ff-pacifico);
+    font-size: 2rem;
+  }
+
+  .pessoa__funcao {
+    color: #8c8888;
+    font-size: 1.25rem;
+  }
+</style>

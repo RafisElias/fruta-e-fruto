@@ -1,0 +1,35 @@
+---
+import Menu from "./Menu.astro";
+---
+
+<header class="cabecalho">
+  <img class="logo" src="/assets/img/logo.jpg" alt="Fruta & Fruto logo" />
+  <Menu />
+</header>
+
+<style>
+  .cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding-inline: 1rem;
+    padding-block: 1.2rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    .cabecalho {
+      justify-content: space-between;
+      padding-inline: 5rem;
+      padding-block: 0;
+    }
+
+    .logo {
+      display: block;
+    }
+  }
+</style>

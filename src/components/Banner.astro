@@ -1,0 +1,34 @@
+<section class="banner">
+  <img class="banner__imagem" src="./assets/img/banner.jpg" alt="" />
+  <h2 class="banner__titulo">Reaproveite melhor os alimentos!</h2>
+</section>
+
+<style>
+  .banner {
+    position: relative;
+    isolation: isolate;
+  }
+  .banner__imagem {
+    min-height: 75vh;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    .banner__imagem {
+      min-height: calc(100vh - 72px);
+    }
+  }
+
+  .banner__titulo {
+    color: #fdfdfd;
+    font-family: var(--ff-pacifico);
+    font-size: clamp(3rem, 6vw + 1rem, 5.0625rem);
+    line-height: 1.5;
+    text-align: center;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.75);
+    height: fit-content;
+    margin: auto;
+    position: absolute;
+    inset: 0 0 0 0;
+  }
+</style>

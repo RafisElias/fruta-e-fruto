@@ -1,7 +1,0 @@
-.sobre__descricao {
-  color: #595959;
-  font-size: 1.75rem;
-  font-size: clamp(1.3rem, 1vw + 1rem, 1.75rem);
-  font-weight: 100;
-  margin-top: 1rem;
-}

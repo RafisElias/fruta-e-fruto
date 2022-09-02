@@ -1,0 +1,135 @@
+---
+const receitas = [
+  {
+    img: "/assets/img/receitas/tigela-de-abacate.jpg",
+    titulo: "Tigela de abacate",
+    descricao:
+      "Receita refrescante e cheia de vitaminas para seu café da manhã.",
+  },
+  {
+    img: "/assets/img/receitas/salada-de-kiwi.jpg",
+    titulo: "Salada de kiwi",
+    descricao:
+      "Receita refrescante e cheia de vitaminas para seu café da manhã.",
+  },
+  {
+    img: "/assets/img/receitas/mix-de-vegetais.jpg",
+    titulo: "Mix de vegetais",
+    descricao:
+      "Receita refrescante e cheia de vitaminas para seu café da manhã.",
+  },
+  {
+    img: "/assets/img/receitas/pimentoes-a-juliana.jpg",
+    titulo: "Pimentões à Juliana",
+    descricao:
+      "Receita refrescante e cheia de vitaminas para seu café da manhã.",
+  },
+  {
+    img: "/assets/img/receitas/prato-oriental.jpg",
+    titulo: "Prato oriental",
+    descricao:
+      "Receita refrescante e cheia de vitaminas para seu café da manhã.",
+  },
+  {
+    img: "/assets/img/receitas/beterrabas-assadas.jpg",
+    titulo: "Beterrabas assadas",
+    descricao:
+      "Receita refrescante e cheia de vitaminas para seu café da manhã.",
+  },
+];
+---
+
+<section id="receitas" class="receitas">
+  {
+    receitas.map((receita) => (
+      <div class="receita">
+        <div class="receita__imagem__container">
+          <img alt={receita.titulo} class="receita__imagem" src={receita.img} />
+        </div>
+        <div class="receita__conteudo">
+          <h4 class="receita__titulo">{receita.titulo}</h4>
+          <p class="receita__descricao">{receita.descricao}</p>
+          <button class="receita__botao">Ver receita</button>
+        </div>
+      </div>
+    ))
+  }
+</section>
+
+<style>
+  .receitas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+    place-items: center;
+    gap: 5rem;
+    padding: 5rem 1rem;
+    background-color: #e5e5e5;
+  }
+
+  @media screen and (min-width: 768px) {
+    .receitas {
+      padding: 5rem 2.5rem;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .receitas {
+      padding: 5rem 5rem;
+    }
+  }
+
+  .receita {
+    background-color: #fdfdfd;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 8px 8px 10px 0 hsl(0, 2%, 78%);
+  }
+
+  .receita__imagem__container {
+    overflow: hidden;
+  }
+
+  .receita__imagem {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 200ms ease-in-out;
+  }
+
+  .receita__imagem:hover {
+    transform: scale(1.1);
+  }
+
+  .receita__conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 1rem;
+  }
+
+  .receita__titulo {
+    font-size: 1.4375rem;
+  }
+
+  .receita__descricao {
+    font-size: 1.1875rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  .receita__botao {
+    --cor: var(--cls-vinho);
+    padding: 1rem;
+    color: #fdfdfd;
+    background-color: var(--cor);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 100ms ease-in-out;
+  }
+
+  .receita__botao:hover,
+  .receita__botao:focus {
+    --cor: hsl(0, 72%, 59%);
+  }
+</style>

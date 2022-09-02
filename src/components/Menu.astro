@@ -1,0 +1,63 @@
+<nav class="menu">
+  <ul class="menu__lista">
+    <li class="menu__item">
+      <a class="menu__link" href="/" data-ativo="true">Início</a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="#receitas" data-ativo="false">Receitas</a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="#quem-somos" data-ativo="false">Quem somos</a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="/" data-ativo="false">Comunidade</a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  :root {
+    --cls-link: hsl(0, 0%, 50%);
+    --cls-active-link: hsl(0, 0%, 20%);
+  }
+
+  .menu__lista {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .menu__link {
+    --color: var(--cls-link);
+    color: var(--color);
+    text-decoration: none;
+    text-transform: lowercase;
+    position: relative;
+    outline-offset: 3px;
+  }
+
+  .menu__link[data-ativo="true"] {
+    --color: var(--cls-active-link);
+    font-weight: bold;
+  }
+
+  .menu__link::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    margin-top: auto;
+    background-color: var(--color);
+    inset: 0;
+    transition: width 200ms ease;
+  }
+
+  .menu__link:hover::before,
+  .menu__link:focus::before {
+    content: "";
+    width: 100%;
+  }
+
+  .menu__item {
+    list-style: none;
+  }
+</style>
